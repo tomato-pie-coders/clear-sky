@@ -14,7 +14,9 @@ export default props => {
           margin: "2rem auto",
         }}
       >
-        <Heading as="h2">Contact Us</Heading>
+        <Heading as="h2" mb="1rem">
+          Contact Us
+        </Heading>
         <ContactForm />
       </section>
     </Layout>
