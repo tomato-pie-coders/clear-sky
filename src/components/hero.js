@@ -7,7 +7,10 @@ export default ({ src, title }) => {
   return (
     <Box
       sx={{
-        backgroundImage: `url(${src})`,
+        background: `linear-gradient(
+          rgba(0, 0, 0, 0.45), 
+          rgba(0, 0, 0, 0.45)
+        ), url(${src})`,
         backgroundSize: "cover",
         height: "35vh",
         backgroundPosition: "center center",
