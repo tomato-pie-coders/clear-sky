@@ -1,3 +1,18 @@
+Planning
+
+1. Clear Sky
+
+-Hero Image
+-Why Us
+-Contact
+-Testimonials
+
+2. Gallery
+   -a bunch of photos
+   -maybe per project?
+3. Contact
+   -form same as on bottom of ClearSky(index)
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

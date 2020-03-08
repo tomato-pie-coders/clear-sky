@@ -1,33 +1,40 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
+import Hero from "../components/hero"
 import SEO from "../components/seo"
+import Testimonials from "../components/testimonials"
 
-const IndexPage = ({ data: { contentfulHeroImage } }) => (
+const IndexPage = ({
+  data: { contentfulHeroImage, allContentfulTestimonial },
+}) => (
   <Layout>
-    <SEO title="Home" />
-    <img
+    <Hero
       src={contentfulHeroImage.image.fluid.src}
-      alt={contentfulHeroImage.image.title}
+      title={contentfulHeroImage.title}
     />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-
-    <Link to="/page-2/">Go to page 2</Link>
+    <Testimonials testimonials={allContentfulTestimonial.edges} />
   </Layout>
 )
 
 export default IndexPage
 
 export const query = graphql`
-  {
+  query testimonialsAndHeroImage {
     contentfulHeroImage(contentful_id: { eq: "13ZvmVYXDd9chrQrJnXrB4" }) {
       image {
         fluid {
           src
+        }
+      }
+      title
+    }
+    allContentfulTestimonial {
+      edges {
+        node {
+          id
+          name
+          quote
         }
       }
     }
