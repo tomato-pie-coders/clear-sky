@@ -5,7 +5,7 @@ import { Heading } from "theme-ui"
 import ContactForm from "../components/contact-form.js"
 import Layout from "../components/layout.js"
 
-export default ({}) => {
+export default props => {
   return (
     <Layout>
       <section
