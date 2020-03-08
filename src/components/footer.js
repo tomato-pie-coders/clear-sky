@@ -18,7 +18,7 @@ export default () => {
           display: "flex",
           flexWrap: "wrap",
           alignItems: "center",
-          maxWidth: 768,
+          maxWidth: 900,
           mx: "auto",
           px: 2,
           py: 4,
@@ -34,7 +34,7 @@ export default () => {
           Contact
         </Link>
         <div sx={{ mx: "auto" }} />
-        <div sx={{ p: 2 }}>© 2020 TPC LLC</div>
+        <div sx={{ p: 2 }}>© {new Date().getFullYear()} Clear Sky</div>
       </div>
     </footer>
   )

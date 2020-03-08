@@ -10,8 +10,9 @@ export default props => {
     <Layout>
       <section
         sx={{
-          maxWidth: "600px",
+          maxWidth: "620px",
           margin: "2rem auto",
+          padding: "0 20px",
         }}
       >
         <Heading as="h2" mb="1rem">
