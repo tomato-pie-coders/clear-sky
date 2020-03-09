@@ -7,8 +7,8 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header
     sx={{
-      color: "text",
-      bg: "background",
+      color: "background",
+      bg: "text",
       boxShadow:
         "0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)",
     }}
@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => (
       <Link
         to="/"
         sx={{
-          color: "text",
+          color: "background",
           p: 2,
         }}
       >
@@ -37,7 +37,7 @@ const Header = ({ siteTitle }) => (
       <Link
         to="/contact"
         sx={{
-          color: "text",
+          color: "background",
           p: 2,
         }}
       >
@@ -46,7 +46,7 @@ const Header = ({ siteTitle }) => (
       <Link
         to="/gallery"
         sx={{
-          color: "text",
+          color: "background",
           p: 2,
         }}
       >
