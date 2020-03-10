@@ -9,7 +9,7 @@ export default () => {
       sx={{
         fontSize: 1,
         color: "background",
-        bg: "text",
+        bg: "primary",
         variant: "styles.footer",
       }}
     >

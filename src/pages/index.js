@@ -11,21 +11,28 @@ import Testimonials from "../components/testimonials"
 const IndexPage = ({
   data: { contentfulHeroImage, allContentfulTestimonial, contentfulSiteCopy },
 }) => (
-  <Layout>
-    <Hero
-      src={contentfulHeroImage.image.fluid.src}
-      title={contentfulHeroImage.title}
-    />
-    <section sx={{ maxWidth: "800px", margin: "2rem auto", padding: "0 20px" }}>
-      <h2>{contentfulSiteCopy.contentTitle}</h2>
-      <p>{contentfulSiteCopy.content.content}</p>
-    </section>
-    <Testimonials testimonials={allContentfulTestimonial.edges} />
-    <section sx={{ maxWidth: "620px", margin: "2rem auto", padding: "0 20px" }}>
-      <h2>Contact Us</h2>
-      <ContactForm />
-    </section>
-  </Layout>
+  <>
+    <SEO title="Home" />
+    <Layout>
+      <Hero
+        src={contentfulHeroImage.image.fluid.src}
+        title={contentfulHeroImage.title}
+      />
+      <section
+        sx={{ maxWidth: "800px", margin: "2rem auto", padding: "0 20px" }}
+      >
+        <h2>{contentfulSiteCopy.contentTitle}</h2>
+        <p>{contentfulSiteCopy.content.content}</p>
+      </section>
+      <Testimonials testimonials={allContentfulTestimonial.edges} />
+      <section
+        sx={{ maxWidth: "620px", margin: "2rem auto", padding: "0 20px" }}
+      >
+        <h2>Contact Us</h2>
+        <ContactForm />
+      </section>
+    </Layout>
+  </>
 )
 
 export default IndexPage
