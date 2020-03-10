@@ -4,7 +4,7 @@ export default {
   ...tailwind,
   colors: {
     ...tailwind.colors,
-    primary: tailwind.colors.red[9],
+    primary: tailwind.colors.gray[9],
   },
   styles: {
     ...tailwind.styles,
@@ -16,7 +16,7 @@ export default {
       bg: "primary",
       transition: "all 0.225s ease-in-out",
       "&:hover": {
-        bg: tailwind.colors.red[8],
+        bg: tailwind.colors.gray[7],
         cursor: "pointer",
       },
       "&:disabled": {
