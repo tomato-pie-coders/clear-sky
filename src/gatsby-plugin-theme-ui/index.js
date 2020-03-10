@@ -9,4 +9,19 @@ export default {
   styles: {
     ...tailwind.styles,
   },
+  buttons: {
+    ...tailwind.buttons,
+    primary: {
+      ...tailwind.buttons.primary,
+      bg: "primary",
+      transition: "all 0.225s ease-in-out",
+      "&:hover": {
+        bg: tailwind.colors.red[8],
+        cursor: "pointer",
+      },
+      "&:disabled": {
+        opacity: 0.65,
+      },
+    },
+  },
 }
