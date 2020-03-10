@@ -9,6 +9,9 @@ function encode(data) {
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&")
 }
+function validEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+}
 
 export default props => {
   const [state, setState] = useState({ name: "", email: "", message: "" })
@@ -19,6 +22,12 @@ export default props => {
       [e.target.name]: e.target.value,
     })
   }
+
+  function toggleDisabled() {
+    return state.name.trim() && validEmail(state.email.trim())
+  }
+
+  console.log(!state.name && !validEmail(state.email.trim()))
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -83,7 +92,9 @@ export default props => {
         ></Textarea>
       </Box>
       <Box mt={3}>
-        <Button type="submit">Send</Button>
+        <Button disabled={!toggleDisabled()} type="submit">
+          Send
+        </Button>
       </Box>
     </Box>
   )
